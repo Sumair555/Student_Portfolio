@@ -9,25 +9,27 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: url('2.png') no-repeat center center fixed; /* Background image for the body */
+  background: url('2.png') no-repeat center center fixed;
   background-size: cover;
-  color: #000000; /* Default text color */
+  color: #000000;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  width: 80%;
-  max-width: 900px;
+  width: 90%; /* Adjusted for better readability */
+  max-width: 1200px; /* Increased max-width for larger screens */
   margin: 0 auto;
   padding: 20px;
-  background: rgba(146, 19, 19, 0); /* Transparent background for content */
+  background: rgba(146, 19, 19, 0);
   border-radius: 10px;
 }
 
 header {
-  background: url(3.jpg) no-repeat center center fixed; /* Header background image */
+  background: url(3.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: #ffffff; /* Header text color */
+  color: #ffffff;
   padding: 10px 20px;
   position: fixed;
   width: 100%;
@@ -40,12 +42,13 @@ header {
 
 .profile {
   position: absolute;
-  left: 160px; /* Adjust position of profile image */
+  left: 20px; /* Adjusted for mobile */
+  top: 20px; /* Adjusted for mobile */
 }
 
 .profile img {
-  width: 100px;
-  height: 100px;
+  width: 80px; /* Increased size for better visibility */
+  height: 80px; /* Increased size for better visibility */
   border-radius: 50%;
 }
 
@@ -56,26 +59,29 @@ header {
 }
 
 .header-content h1 {
-  font-size: 2.0rem;
-  margin-bottom: 5px;
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  margin-bottom: 10px;
+  text-align: center; /* Centered for better presentation */
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
+  justify-content: center; /* Centered navigation items */
   margin: 0;
   padding: 0;
-  margin-top: 1vw; /* Adjust top margin for navigation */
+  margin-top: 20px; /* Adjusted margin for spacing */
 }
 
 nav ul li {
-  margin-left: 25px;
+  margin-left: 20px; /* Increased margin between navigation items */
 }
 
 nav ul li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Larger font size for navigation */
+  padding: 10px; /* Increased padding for easier tapping on mobile */
 }
 
 nav ul li a:hover {
@@ -84,65 +90,60 @@ nav ul li a:hover {
 
 /* Sections styling */
 section {
-  padding: 40px 0;
-  margin-top: 100px; /* Top margin to push content below fixed header */
-  background: rgba(255, 255, 255, 0.358); /* Light background for sections */
-  color: #000; /* Black text color for sections */
+  padding: 40px 20px; /* Increased padding for better spacing */
+  margin-top: 100px; /* Adjusted margin for better separation from header */
+  background: rgba(255, 255, 255, 0.318); /* Slightly opaque background for readability */
+  color: #000;
   border-radius: 10px;
 }
 
+section:first-of-its-kind {
+  margin-top: 80px; /* Ensure first section isn't behind the header */
+}
+
 h2 {
-  font-size: 2rem;
+  font-size: 2rem; /* Slightly larger font size for section headings */
   margin-bottom: 20px;
   color: #000000;
   text-decoration-line: underline;
-  
-}
-h1 {
-   color: #ffffff;
+  text-align: center; /* Centered for better presentation */
 }
 
 .about-section {
+  margin-top: auto;
   display: flex;
+  flex-direction: row; /* Changed back to row for larger screens */
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .about-content {
   flex: 1;
-  margin-right: 100px; /* Adjust right margin for content */
+  margin-right: 20px; /* Increased margin for better separation */
 }
 
 .about-image {
   flex: 1;
   display: flex;
   justify-content: center;
-  
 }
 
 .about-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 190px;
-
+  border-radius: 10px; /* Rounded corners for images */
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 10px;
+ul, ol {
+  padding-left: 20px;
 }
 
 .project {
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 30px; /* Increased margin between projects */
+  padding: 20px; /* Increased padding for better spacing */
   border: 1px solid #ccc;
-  background: rgba(255, 255, 255, 0.8); /* Light background for projects */
-  color: #000; /* Black text color for projects */
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
   border-radius: 10px;
 }
 
@@ -174,45 +175,43 @@ tr:nth-child(even) {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 95%; /* Adjusted for smaller screens */
   }
 
   .profile img {
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Adjusted size for smaller screens */
+    height: 60px; /* Adjusted size for smaller screens */
   }
 
   .header-content h1 {
-    font-size: 1rem;
+    font-size: 2rem; /* Slightly reduced font size for smaller screens */
   }
 
   nav ul {
-    flex-direction: column;
+    flex-wrap: wrap; /* Wrapped navigation items for smaller screens */
+    justify-content: flex-start; /* Left-aligned navigation items */
+    margin-top: 10px; /* Reduced top margin for spacing */
   }
 
   nav ul li {
-    margin-left: 0;
-    margin-bottom: 10px;
+    margin-left: 15px; /* Adjusted margin between navigation items */
+    margin-bottom: 10px; /* Increased margin bottom for spacing */
+  }
+
+  section {
+    padding: 30px 10px; /* Adjusted padding for smaller screens */
+    margin-top: 80px; /* Reduced margin top for better separation */
   }
 
   .about-section {
-    flex-direction: column;
+    flex-direction: column; /* Stacked about section for smaller screens */
   }
 
   .about-content {
-    margin-right: 0;
+    margin-right: 0; /* Removed right margin for stacked layout */
   }
 
   .about-image {
     margin-top: 20px;
   }
 }
-
-/* Smooth scrolling behavior for navigation links */
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 250px;
-} 
