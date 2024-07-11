@@ -40,17 +40,7 @@ header {
   justify-content: center;
 }
 
-.profile {
-  position: absolute;
-  left: 20px; /* Adjusted for mobile */
-  top: 20px; /* Adjusted for mobile */
-}
 
-.profile img {
-  width: 80px; /* Increased size for better visibility */
-  height: 80px; /* Increased size for better visibility */
-  border-radius: 50%;
-}
 
 .header-content {
   display: flex;
